@@ -1,14 +1,19 @@
 function sortear() {
-    //Armazena os valores dos campos de entrada e converte para números inteiros
-    let quantidade = parseInt(document.getElementById('quantidade').value);
-    let de = parseInt(document.getElementById('de').value);
-    let ate = parseInt(document.getElementById('ate').value);
+    //Armazena os valores dos campos de entrada
+    let quantidade = document.getElementById('quantidade').value;
+    let de = document.getElementById('de').value;
+    let ate = document.getElementById('ate').value;
 
     //Verifica se os campos estão vazios
     if (quantidade === '' || de === '' || ate === '') {
         alert('Por favor, preencha todos os campos!');
         return;
     };
+
+    //Converte para números inteiros e armazena na variável
+    quantidade = parseInt(quantidade);
+    de = parseInt(de);
+    ate = parseInt(ate);
 
     //Verifica se o número inicial inserido é maior ou igual que o número final
     if (de >= ate) {
